@@ -22,6 +22,11 @@ public class ProductController {
         return productService.getProductById(id);
     }
 
+    @PostMapping("/products")
+    public Object addProduct(@RequestBody Product product) {
+        return productService.addProduct(product);
+    }
+
     @PutMapping("/products/{id}")
     public Object updateProductById(@RequestBody Product product) {
         return productService.updateProductById(product);
